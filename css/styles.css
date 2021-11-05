@@ -1,3 +1,22 @@
+strong {
+  font-style: italic;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 2ch;
+}
+
+p {
+  margin: .2em;
+}
+
+#size-row {
+  margin: 1em auto;
+}
+
 .form-check-inline {
   margin-left: 1em;
+}
+
+#add-pizza {
+  display: block;
+  margin: 1em auto;
 }
