@@ -9,22 +9,72 @@
 </head>
 <body>
   <div class="container">
-    <div class="row" id="size-row">
-
-    </div>
-    <div class="row" id="topping-row">
-      <div class="col-4" id="cheese-sauce">
-
+    <form id="pizza-maker">
+      <!--prevent enter key submitting form-->
+      <button type="submit" disabled style="display: none"></button>
+      <div class="row" id="size-row">
+        <h4>Choose a size:</h4>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radio-size" id="radio-size-m" value="medium">
+          <label class="form-check-label" for="radio-size-m">Medium</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radio-size" id="radio-size-l" value="large" checked>
+          <label class="form-check-label" for="radio-size-l">Large</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radio-size" id="radio-size-xl" value="extralarge">
+          <label class="form-check-label" for="radio-size-xl">Extra Large</label>
+        </div>
       </div>
-      <div class="col-4" id="proteins">
+      <div class="row" id="topping-row">
+        <div class="col-4" id="cheese-sauce">
+          <h5>Sauce:</h5>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radio-sauce" id="radio-sauce-red" value="redsauce">
+            <label class="form-check-label" for="radio-sauce-red">Classic Marinara</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radio-sauce" id="radio-sauce-white" value="whitesauce">
+            <label class="form-check-label" for="radio-sauce-white">Creamy Parmesan Alfredo</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radio-sauce" id="radio-sauce-aglio" value="garlicoil">
+            <label class="form-check-label" for="radio-sauce-aglio">Aglio e Olio <em>(garlic and oil)</em></label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radio-sauce" id="radio-sauce-none" value="">
+            <label class="form-check-label" for="radio-sauce-none">No sauce</label>
+          </div>
+          <br>
+          <h5>Cheese:</h5>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radio-cheese" id="radio-cheese-reg" value="cheese">
+            <label class="form-check-label" for="radio-cheese-reg">Regular</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radio-cheese" id="radio-cheese-double" value="doublecheese">
+            <label class="form-check-label" for="radio-cheese-double">Double Cheese</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radio-cheese" id="radio-cheese-vegan" value="vegancheese">
+            <label class="form-check-label" for="radio-cheese-vegan">Vegan Cheese <em>(cashew-based)</em></label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radio-cheese" id="radio-cheese-none" value="">
+            <label class="form-check-label" for="radio-cheese-none">No cheese</label>
+          </div>
+        </div>
+        <div class="col-4" id="proteins">
 
-      </div>
-      <div class="col-4" id="veggies">
+        </div>
+        <div class="col-4" id="veggies">
 
+        </div>
       </div>
-    </div>
+    </form>
     <div class="row" id="ordered-pies">
-      
+
     </div>
   </div>
 </body>
