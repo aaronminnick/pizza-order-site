@@ -94,25 +94,29 @@ function updateOrderedPiesDisplay(orderedPizzas) {
   let htmlString = "";
   for (let p in orderedPizzas.pizzas) { 
     let topList = "";
-    pizza = orderedPizzas.pizzas[p];
+    let pizza = orderedPizzas.pizzas[p];
     for (let t of pizza.toppings) {
       topList += "<li>" + t.name + "</li>";
     }
-    htmlString += "<div class='row ordered-pie'><p>Size: " + pizza.size + "</p><p>Toppings:</p><ul>" + topList + "</ul><p>Price: <strong>$" + pizza.price + "</strong></p><button class='btn-dark' value='" + pizza.id + "'>Edit Order</button></div>";
+      htmlString += "<div class='row ordered-pie'><p>Size: " + pizza.size + "</p><p>Toppings:</p><ul>" + topList + "</ul><p>Price: <strong>$" + pizza.price + "</strong></p><button class='btn-dark' value='" + pizza.id + "'>Edit this pizza</button></div>";
   }
-  $("#ordered-pies").html(htmlString);
+  $("#user-pies").html(htmlString);
 }
 
 function addEditListeners(orderedPizzas) {
   $("#ordered-pies").on('click', 'button', function() {
-    loadPriorPie(orderedPizzas, $(this).val());
+    loadPie(orderedPizzas, $(this).val());
     $("#order-picker").slideToggle(250);
     $("#ordered-pies").slideToggle(250);
   });
 }
 
-function loadPriorPie(orderedPizzas, pizzaId) {
-  currentpizza = orderedPizzas.pizzas[pizzaId];
+function loadPie(orderedPizzas, pizzaId) {
+  if (pizzaId === 'new') {
+    currentpizza = new Pizza('large');
+  } else {
+    currentpizza = orderedPizzas.pizzas[pizzaId];
+  }
   //check proper size
   $("#size-row input[value='" + currentpizza.size + "']").prop('checked', true);
   //uncheck all toppings, then check the ones the pizza has
@@ -124,10 +128,6 @@ function loadPriorPie(orderedPizzas, pizzaId) {
   }
   //reset toppings since they will be updated when form submits again
   currentpizza.toppings = [];
-}
-
-function loadNewPie() {
-
 }
 
 $(document).ready(function() {

@@ -8,6 +8,11 @@ p {
   margin: .2em;
 }
 
+#order-picker {
+  border: 2px solid darkkhaki;
+  padding: 1em;
+}
+
 #size-row {
   margin: 1em auto;
 }

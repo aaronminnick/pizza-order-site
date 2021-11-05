@@ -28,7 +28,7 @@ $ start index.html
 **Or** you may use the green "Code" button to download the files to your computer. Then simply extract the package, and open index.html with your browser of choice.
 
 ### Known Bugs/Issues:
-* TODO: add functionality to create multiple pizzas in an order
+* Currently adding additional pizzas does not work correctly, and instead just keeps modifying the original pizza.
 * TDD is not caught up for additional 'helper objects' added during development (so not really TDD).
 
 _Thanks for reading! Please feel free to contact me with feedback!_
