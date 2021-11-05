@@ -40,7 +40,11 @@ _Thanks for reading! Please feel free to contact me with feedback!_
 ### TDD Specs
 
 #### **Describe: Pizza()**
-Test: "It will return an object with two properties: an (empty) array of toppings, and a string representing pizza size."
-```
-Code: const pizza = new Pizza('large');
-Expected Output: Pizza { toppings: [], size: 'large }
+Test: "It will return an object with two properties: an (empty) array of toppings, and a string representing pizza size."  
+Code: ```const pizza = new Pizza('large');```  
+Expected Output: ```Pizza { toppings: [], size: 'large }```  
+
+#### **Describe: Topping()**
+Test: "It will return an object with two properties: a string for the topping name, and a number for its price."  
+Code: ```const mushrooms = new Topping('mushrooms', 2.5);```  
+Expected Output: ```Topping { name: 'mushrooms', price: 2.5 }```  

@@ -3,4 +3,9 @@ function Pizza(size) {
   this.size = size;
 }
 
-const pizza = new Pizza('large');
+
+function Topping(name, price) {
+  this.name = name;
+  this.price = price;
+}
+
