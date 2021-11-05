@@ -20,3 +20,11 @@ p {
   display: block;
   margin: 1em auto;
 }
+
+#ordered-pies {
+  display: none;
+}
+
+.ordered-pie {
+  border: 2px solid darkkhaki;
+}
