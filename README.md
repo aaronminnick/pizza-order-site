@@ -39,7 +39,7 @@ _Thanks for reading! Please feel free to contact me with feedback!_
 ***
 ### TDD Specs
 
-#### **Describe: Pizza()**
+#### _**Describe: Pizza()**_
 Test: "It will return an object with two properties: an (empty) array of toppings, and a string representing pizza size."  
 Code: ```const pizza = new Pizza('large');```  
 Expected Output: ```Pizza { toppings: [], size: 'large }```  
@@ -47,15 +47,22 @@ Expected Output: ```Pizza { toppings: [], size: 'large }```
 ##### **Describe: Pizza.prototype.addTopping()**
 Test: "It will add a topping object to the toppings array in the pizza object."  
 Code: ```pizza.addTopping(mushrooms);```  
-Expected Output: ```Pizza { toppings: [ Topping { name: mushrooms, price: 2.5 } ], size: 'large' }```  
+Expected Output: ```Pizza { toppings: [ Topping { name: 'mushrooms', price: 2.5 } ], size: 'large' }```  
 
-Test: "It will not add the same topping if a topping of the same name already exists in the toppings array."
+Test: "It will not add the same topping if a topping of the same name already exists in the toppings array."  
 Code: 
 ```
 pizza.addTopping(mushrooms);
 pizza.addTopping(mushrooms);
 ```
-Expected Output: ```Pizza { toppings: [ Topping { name: mushrooms, price: 2.5 } ], size: 'large' }```
+Expected Output: ```Pizza { toppings: [ Topping { name: 'mushrooms', price: 2.5 } ], size: 'large' }```
+
+Test: "If given multiple toppings, it will add them all to the pizza toppings array."  
+Code: ```pizza.addTopping(mushrooms, pepperoni, blackolives);```  
+Expected Output: 
+```
+Pizza { toppings: [ Topping { name: 'mushrooms', price: 2.5 }, Topping { name: 'pepperoni', price: 3 }, Topping { name: 'black olives', price: 2.5 } ], size: 'large' }
+```
 
 ##### **Describe: Pizza.prototype.calculatePrice()**
 Test: "It will calculate a number representing price based on size and toppings, set that price to a new property internally, and also return it."  
@@ -67,7 +74,7 @@ pizza.calculatePrice();
 ```
 Expected Output: ```17.5```
 
-#### **Describe: Topping()**
+#### _**Describe: Topping()**_
 Test: "It will return an object with two properties: a string for the topping name, and a number for its price."  
 Code: ```const mushrooms = new Topping('mushrooms', 2.5);```  
 Expected Output: ```Topping { name: 'mushrooms', price: 2.5 }```  

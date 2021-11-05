@@ -3,9 +3,11 @@ function Pizza(size) {
   this.size = size;
 }
 
-Pizza.prototype.addTopping = function(topping) {
-  if (this.toppings.indexOf(topping) === -1) {
-    this.toppings.push(topping);
+Pizza.prototype.addTopping = function(...topping) {
+  for (t of topping) {
+    if (this.toppings.indexOf(t) === -1) {
+    this.toppings.push(t);
+    }
   }
 };
 
