@@ -16,15 +16,15 @@
         <h4>Choose a size:</h4>
         <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" name="radio-size" id="radio-size-m" value="medium">
-          <label class="form-check-label" for="radio-size-m">Medium</label>
+          <label class="form-check-label" for="radio-size-m">Medium <strong>$12</strong></label>
         </div>
         <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" name="radio-size" id="radio-size-l" value="large" checked>
-          <label class="form-check-label" for="radio-size-l">Large</label>
+          <label class="form-check-label" for="radio-size-l">Large <strong>$15</strong></label>
         </div>
         <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" name="radio-size" id="radio-size-xl" value="extralarge">
-          <label class="form-check-label" for="radio-size-xl">Extra Large</label>
+          <label class="form-check-label" for="radio-size-xl">Extra Large <strong>$20</strong></label>
         </div>
       </div>
       <div class="row" id="topping-row">
@@ -43,14 +43,14 @@
             <label class="form-check-label" for="radio-sauce-aglio">Aglio e Olio <em>(garlic and oil)</em></label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="radio-sauce" id="radio-sauce-none" value="">
-            <label class="form-check-label" for="radio-sauce-none">No Sauce</label>
+            <input class="form-check-input" type="radio" name="radio-sauce" id="radio-sauce-none" value="nosauce">
+            <label class="form-check-label" for="radio-sauce-none">No Sauce <strong>-$1</strong></label>
           </div>
           <br>
           <h5>Cheese:</h5>
           <div class="form-check">
             <input class="form-check-input" type="radio" name="radio-cheese" id="radio-cheese-reg" value="cheese" checked>
-            <label class="form-check-label" for="radio-cheese-reg">Regular</label>
+            <label class="form-check-label" for="radio-cheese-reg">Regular Cheese</label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="radio" name="radio-cheese" id="radio-cheese-double" value="doublecheese">
@@ -61,8 +61,8 @@
             <label class="form-check-label" for="radio-cheese-vegan">Vegan Cheese <em>(cashew-based)</em> <strong>+$2</strong></label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="radio-cheese" id="radio-cheese-none" value="">
-            <label class="form-check-label" for="radio-cheese-none">No Cheese</label>
+            <input class="form-check-input" type="radio" name="radio-cheese" id="radio-cheese-none" value="nocheese">
+            <label class="form-check-label" for="radio-cheese-none">No Cheese <strong>-$1.5</strong></label>
           </div>
         </div>
         <div class="col-4" id="proteins">
@@ -137,7 +137,7 @@
         </div>
       </div>
     </form>
-    <div class="row" id="ordered-pies">
+    <div id="ordered-pies">
 
     </div>
   </div>
