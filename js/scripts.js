@@ -4,7 +4,9 @@ function Pizza(size) {
 }
 
 Pizza.prototype.addTopping = function(topping) {
-  this.toppings.push(topping);
+  if (this.toppings.indexOf(topping) === -1) {
+    this.toppings.push(topping);
+  }
 };
 
 Pizza.prototype.calculatePrice = function() {

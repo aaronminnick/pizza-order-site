@@ -49,8 +49,16 @@ Test: "It will add a topping object to the toppings array in the pizza object."
 Code: ```pizza.addTopping(mushrooms);```  
 Expected Output: ```Pizza { toppings: [ Topping { name: mushrooms, price: 2.5 } ], size: 'large' }```  
 
+Test: "It will not add the same topping if a topping of the same name already exists in the toppings array."
+Code: 
+```
+pizza.addTopping(mushrooms);
+pizza.addTopping(mushrooms);
+```
+Expected Output: ```Pizza { toppings: [ Topping { name: mushrooms, price: 2.5 } ], size: 'large' }```
+
 ##### **Describe: Pizza.prototype.calculatePrice()**
-Test: "It will calculate a number representing price based on size and toppings, set that price to a new property internally, and also return it."
+Test: "It will calculate a number representing price based on size and toppings, set that price to a new property internally, and also return it."  
 Code: 
 ```
 const pizza = new Pizza('large');
