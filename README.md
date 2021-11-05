@@ -44,6 +44,21 @@ Test: "It will return an object with two properties: an (empty) array of topping
 Code: ```const pizza = new Pizza('large');```  
 Expected Output: ```Pizza { toppings: [], size: 'large }```  
 
+##### **Describe: Pizza.prototype.addTopping()**
+Test: "It will add a topping object to the toppings array in the pizza object."  
+Code: ```pizza.addTopping(mushrooms);```  
+Expected Output: ```Pizza { toppings: [mushrooms], size: 'large' }```  
+
+##### **Describe: Pizza.prototype.calculatePrice()**
+Test: "It will calculate a number representing price based on size and toppings, set that price to a new property internally, and also return it."
+Code: 
+```
+const pizza = new Pizza('large');
+pizza.addTopping(mushrooms);
+pizza.calculatePrice();
+```
+Expected Output: ```17.5```
+
 #### **Describe: Topping()**
 Test: "It will return an object with two properties: a string for the topping name, and a number for its price."  
 Code: ```const mushrooms = new Topping('mushrooms', 2.5);```  
