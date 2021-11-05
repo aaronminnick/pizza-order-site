@@ -31,7 +31,7 @@
         <div class="col-4" id="cheese-sauce">
           <h5>Sauce:</h5>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="radio-sauce" id="radio-sauce-red" value="redsauce">
+            <input class="form-check-input" type="radio" name="radio-sauce" id="radio-sauce-red" value="redsauce" checked>
             <label class="form-check-label" for="radio-sauce-red">Classic Marinara</label>
           </div>
           <div class="form-check">
@@ -44,32 +44,96 @@
           </div>
           <div class="form-check">
             <input class="form-check-input" type="radio" name="radio-sauce" id="radio-sauce-none" value="">
-            <label class="form-check-label" for="radio-sauce-none">No sauce</label>
+            <label class="form-check-label" for="radio-sauce-none">No Sauce</label>
           </div>
           <br>
           <h5>Cheese:</h5>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="radio-cheese" id="radio-cheese-reg" value="cheese">
+            <input class="form-check-input" type="radio" name="radio-cheese" id="radio-cheese-reg" value="cheese" checked>
             <label class="form-check-label" for="radio-cheese-reg">Regular</label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="radio" name="radio-cheese" id="radio-cheese-double" value="doublecheese">
-            <label class="form-check-label" for="radio-cheese-double">Double Cheese</label>
+            <label class="form-check-label" for="radio-cheese-double">Double Cheese <strong>+$2</strong></label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="radio" name="radio-cheese" id="radio-cheese-vegan" value="vegancheese">
-            <label class="form-check-label" for="radio-cheese-vegan">Vegan Cheese <em>(cashew-based)</em></label>
+            <label class="form-check-label" for="radio-cheese-vegan">Vegan Cheese <em>(cashew-based)</em> <strong>+$2</strong></label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="radio" name="radio-cheese" id="radio-cheese-none" value="">
-            <label class="form-check-label" for="radio-cheese-none">No cheese</label>
+            <label class="form-check-label" for="radio-cheese-none">No Cheese</label>
           </div>
         </div>
         <div class="col-4" id="proteins">
-
+          <h5>Proteins: <strong>$3/ea</strong></h5>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox"  id="protein-pepperoni" value="pepperoni">
+            <label class="form-check-label" for="protein-pepperoni">Pepperoni</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox"  id="protein-sausage" value="sausage">
+            <label class="form-check-label" for="protein-sausage">Italian Sausage</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox"  id="protein-bacon" value="bacon">
+            <label class="form-check-label" for="protein-bacon">Bacon</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox"  id="protein-chicken" value="chicken">
+            <label class="form-check-label" for="protein-chicken">Roast Chicken</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox"  id="protein-anchovies" value="anchovies">
+            <label class="form-check-label" for="protein-anchovies">Anchovies</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox"  id="protein-vegan-pepperoni" value="veganpepperoni">
+            <label class="form-check-label" for="protein-vegan-pepperoni">Vegan Pepperoni <em>(soy-based)</em></label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox"  id="protein-vegan-sausage" value="vegansausage">
+            <label class="form-check-label" for="protein-vegan-sausage">Vegan Sausage <em>(soy-based)</em></label>
+          </div>
         </div>
         <div class="col-4" id="veggies">
-
+          <h5>Veggies: <strong>$2.5/ea</strong></h5>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox"  id="veggies-artichokes" value="artichokes">
+            <label class="form-check-label" for="veggies-artichokes">Artichoke Hearts</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox"  id="veggies-peppers" value="peppers">
+            <label class="form-check-label" for="veggies-peppers">Bell Peppers</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox"  id="veggies-hot-peppers" value="hotpeppers">
+            <label class="form-check-label" for="veggies-hot-peppers">Cherry Peppers <em>(spicy!)</em></label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox"  id="veggies-olives" value="blackolives">
+            <label class="form-check-label" for="veggies-blackolives">Black Olives</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox"  id="veggies-mushrooms" value="mushrooms">
+            <label class="form-check-label" for="veggies-mushrooms">Mushrooms</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox"  id="veggies-onions" value="onions">
+            <label class="form-check-label" for="veggies-onions">Red Onions</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox"  id="veggies-confit" value="garlicconfit">
+            <label class="form-check-label" for="veggies-confit">Garlic Confit</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox"  id="veggies-kale" value="kale">
+            <label class="form-check-label" for="veggies-kale">Kale</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox"  id="veggies-potato" value="potato">
+            <label class="form-check-label" for="veggies-potato">Red Potato</label>
+          </div>
         </div>
       </div>
     </form>
