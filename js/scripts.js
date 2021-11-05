@@ -82,7 +82,6 @@ function ListOfOrderedPizzas() {
 }
 
 ListOfOrderedPizzas.prototype.addPizza = function(pizza) {
-  console.log(pizza.id);
   if (typeof pizza.id === 'undefined') {  
     pizza.id = this.pizzaId;
     this.pizzaId += 1;
@@ -123,7 +122,16 @@ function loadPriorPie(orderedPizzas, pizzaId) {
   }
   $("#order-picker").slideToggle(250);
   $("#ordered-pies").slideToggle(250);
+  
+  //delete old toppings from backend
+  for (let t of loadedPizza.toppings) {
+    loadedPizza.removeTopping(t);
+  }
   currentpizza = loadedPizza;
+}
+
+function loadNewPie() {
+
 }
 
 $(document).ready(function() {
