@@ -75,7 +75,28 @@ function ListOfToppings() {
 }
 
 //UI Logic
+function addOrderedPizza(pizza) {
+  let topList = "";
+  for (let t of pizza.toppings) {
+    topList += "<li>" + t.name + "</li>";
+  }
+  $("#ordered-pies").append("<div class='row'><p>Size: " + pizza.size + "</p><p>Toppings:</p><ul>" + topList + "</ul><p>Price: <strong>$" + pizza.price + "</strong></p></div>");
+}
+
+
 $(document).ready(function() {
   const listOfToppings = new ListOfToppings();
+  const currentpizza = new Pizza('large');
   
+  $("#pizza-maker").submit(function(event) {
+    event.preventDefault();
+    $("#order-picker").slideToggle(250);
+    $("#topping-row input:checked").each(function(i) {
+      console.log(i +": "+ $(this).val());
+      currentpizza.addTopping(listOfToppings[$(this).val()]);
+    });
+    currentpizza.calculatePrice();
+    addOrderedPizza(currentpizza);
+  });
+
 });
