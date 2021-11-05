@@ -106,28 +106,24 @@ function updateOrderedPiesDisplay(orderedPizzas) {
 function addEditListeners(orderedPizzas) {
   $("#ordered-pies").on('click', 'button', function() {
     loadPriorPie(orderedPizzas, $(this).val());
+    $("#order-picker").slideToggle(250);
+    $("#ordered-pies").slideToggle(250);
   });
 }
 
 function loadPriorPie(orderedPizzas, pizzaId) {
-  loadedPizza = orderedPizzas.pizzas[pizzaId];
+  currentpizza = orderedPizzas.pizzas[pizzaId];
   //check proper size
-  $("#size-row input[value='" + loadedPizza.size + "']").prop('checked', true);
+  $("#size-row input[value='" + currentpizza.size + "']").prop('checked', true);
   //uncheck all toppings, then check the ones the pizza has
   $("#topping-row input").each(function() {
     $(this).prop('checked', false);
   });
-  for (let t of loadedPizza.toppings) {
+  for (let t of currentpizza.toppings) {
     $("#topping-row input[value='" + t.value + "']").prop('checked', true);
+    //delete old toppings since they will be updated when form submits again
+    currentpizza.removeTopping(t);
   }
-  $("#order-picker").slideToggle(250);
-  $("#ordered-pies").slideToggle(250);
-  
-  //delete old toppings from backend
-  for (let t of loadedPizza.toppings) {
-    loadedPizza.removeTopping(t);
-  }
-  currentpizza = loadedPizza;
 }
 
 function loadNewPie() {
