@@ -61,8 +61,19 @@ Test: "If given multiple toppings, it will add them all to the pizza toppings ar
 Code: ```pizza.addTopping(mushrooms, pepperoni, blackolives);```  
 Expected Output: 
 ```
-Pizza { toppings: [ Topping { name: 'mushrooms', price: 2.5 }, Topping { name: 'pepperoni', price: 3 }, Topping { name: 'black olives', price: 2.5 } ], size: 'large' }
+Pizza { toppings: [ Topping { name: 'mushrooms', price: 2.5 }, 
+Topping { name: 'pepperoni', price: 3 }, 
+Topping { name: 'black olives', price: 2.5 } ], size: 'large' }
 ```
+
+##### **Describe: Pizza.prototype.removeTopping()**
+Test: "It will remove a topping object from the toppings array in the pizza object."  
+Code: 
+```
+pizza.addTopping(mushrooms, pepperoni);
+pizza.removeTopping(mushrooms);
+```  
+Expected Output: ```Pizza { toppings: [ Topping { name: 'pepperoni', price: 3 } ], size: 'large' }```
 
 ##### **Describe: Pizza.prototype.calculatePrice()**
 Test: "It will calculate a number representing price based on size and toppings, set that price to a new property internally, and also return it."  

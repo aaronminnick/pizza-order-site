@@ -11,6 +11,13 @@ Pizza.prototype.addTopping = function(...topping) {
   }
 };
 
+Pizza.prototype.removeTopping = function(topping) {
+  let index = this.toppings.indexOf(topping);
+  if (index !== -1) {
+    this.toppings.splice(index, 1);
+  }
+};
+
 Pizza.prototype.calculatePrice = function() {
   let total = 0;
   switch (this.size) {
