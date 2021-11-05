@@ -121,9 +121,9 @@ function loadPriorPie(orderedPizzas, pizzaId) {
   });
   for (let t of currentpizza.toppings) {
     $("#topping-row input[value='" + t.value + "']").prop('checked', true);
-    //delete old toppings since they will be updated when form submits again
-    currentpizza.removeTopping(t);
   }
+  //reset toppings since they will be updated when form submits again
+  currentpizza.toppings = [];
 }
 
 function loadNewPie() {
@@ -143,6 +143,7 @@ $(document).ready(function() {
     $("#topping-row input:checked").each(function(i) {
       currentpizza.addTopping(listOfToppings[$(this).val()]);
     });
+    console.log("list of toppings", currentpizza.toppings);
     currentpizza.calculatePrice();
     orderedPizzas.addPizza(currentpizza);
     updateOrderedPiesDisplay(orderedPizzas);

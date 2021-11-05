@@ -28,7 +28,6 @@ $ start index.html
 **Or** you may use the green "Code" button to download the files to your computer. Then simply extract the package, and open index.html with your browser of choice.
 
 ### Known Bugs/Issues:
-* Editing your order does not always correctly update the ingredients (something to do with not deleting old choices correctly)
 * TODO: add functionality to create multiple pizzas in an order
 * TDD is not caught up for additional 'helper objects' added during development (so not really TDD).
 
