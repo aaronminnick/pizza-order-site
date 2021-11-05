@@ -9,7 +9,7 @@ This is the week 4 independent project at [Epicodus](https://www.epicodus.com). 
 
 We were required to use test driven development. To see a list of my TDD specs, please scroll to the end of the readme.
 
-To check out the project, click [HERE](WIP). Or, follow the setup instructions below to launch the page from a local copy on your machine.
+To check out the project, follow the setup instructions below to launch the page from a local copy on your machine. (Once the page is working bug-free, I will upload it to github pages.)
 
 ### Setup Instructions:
 _(Please note, the below instructions are using gitbash on a Windows 10 computer. Commands may vary if you are using a different OS or terminal program.)_
@@ -28,7 +28,9 @@ $ start index.html
 **Or** you may use the green "Code" button to download the files to your computer. Then simply extract the package, and open index.html with your browser of choice.
 
 ### Known Bugs/Issues:
-n/a
+* Editing your order does not always correctly update the ingredients (something to do with not deleting old choices correctly)
+* TODO: add functionality to create multiple pizzas in an order
+* TDD is not caught up for additional 'helper objects' added during development (so not really TDD).
 
 _Thanks for reading! Please feel free to contact me with feedback!_
 ***
